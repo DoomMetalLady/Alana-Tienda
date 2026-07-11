@@ -1,6 +1,6 @@
 # Alana 
 
-Proyecto de e-commerce (Talento Tech) de **ropa de mujer**. Sitio tipo marketplace, simple e intuitivo, hecho con HTML5, CSS3 y JavaScript puro (sin frameworks).
+Proyecto de e-commerce (Talento Tech) de **ropa de mujer**. Sitio simple e intuitivo, hecho con HTML5, CSS3 y JavaScript puro (sin frameworks).
 
 ## ¿Qué hace?
 
@@ -19,7 +19,6 @@ Proyecto de e-commerce (Talento Tech) de **ropa de mujer**. Sitio tipo marketpla
 ```
 alana/
 ├── assets/                  # recursos generales (a completar)
-├── iconos/                  # íconos propios (a completar)
 ├── img/                     # imágenes propias del catálogo (a completar)
 ├── pages/
 │   ├── carrito/carrito.html
@@ -43,11 +42,6 @@ alana/
 ## API usada
 
 El catálogo se trae en vivo de **DummyJSON**: `https://dummyjson.com/products/category/womens-dresses`.
-No hace falta clave ni backend propio, ya funciona tal cual. Otras categorías de mujer disponibles en la misma API, por si querés sumar más productos: `womens-shoes`, `womens-bags`, `womens-jewellery`, `womens-watches`. Podés ver el listado completo en `https://dummyjson.com/products/category-list`.
+No hace falta clave ni backend propio, ya funciona tal cual.
 
-## Cómo seguir desde acá
 
-1. Si querés combinar más categorías (por ejemplo vestidos + carteras), armá varios `fetch` y unificá los arrays antes de renderizar.
-2. Poné tu endpoint real de Formspree en `footer.js` (línea `URL_FORMSPREE`).
-3. Sumá tus propias imágenes en `/img` y `/iconos`.
-4. Los colores y tipografías están centralizados como variables CSS en `estilos_navbar_&_footer.css` (`:root`), así que podés cambiar la paleta entera desde un solo lugar.
