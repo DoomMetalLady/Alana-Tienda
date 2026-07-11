@@ -1,4 +1,4 @@
-# Alana 👗
+# Alana 
 
 Proyecto de e-commerce (Talento Tech) de **ropa de mujer**. Sitio tipo marketplace, simple e intuitivo, hecho con HTML5, CSS3 y JavaScript puro (sin frameworks).
 
