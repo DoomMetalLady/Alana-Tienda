@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alana | Ropa de mujer con estilo, a un clic</title>
+    <meta name="description" content="Alana: tienda online de ropa . Vestidos, tops, pantalones y más, con envío rápido y las mejores ofertas todos los días.">
+    <meta name="keywords" content="Alana, ropa de mujer, moda femenina, vestidos, indumentaria argentina">
+    <meta name="author" content="Alana">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="estilos_navbar_&_footer.css">
+    <link rel="stylesheet" href="estilos_index.css">
+</head>
+<body>
+
+    <a href="#contenido-principal" class="salto-enlace">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+        <div class="cabecera__fila">
+            <a href="index.html" class="logo" aria-label="Alana, ir al inicio">
+            <img src="assets/logo-alana.svg" alt="Alana" class="logo__imagen">
+            </a>
+
+            <form class="buscador" role="search" action="#" method="get">
+                <label for="input-buscar" class="visualmente-oculto">Buscar productos</label>
+                <input type="search" id="input-buscar" name="buscar" placeholder="Buscar vestidos, tops, pantalones...">
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <div class="cabecera__acciones">
+                <a href="pages/registro_&_login/login.html" class="accion">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span>Ingresar</span>
+                </a>
+                <a href="pages/carrito/carrito.html" class="accion accion--carrito">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span>Carrito</span>
+                    <span class="contador-carrito" id="contador-carrito" aria-live="polite">0</span>
+                </a>
+                <button class="menu-hamburguesa" id="btn-menu" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú de categorías">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav-principal" id="nav-principal" aria-label="Categorías principales">
+            <ul>
+                <li><a href="index.html#vestidos">Vestidos</a></li>
+                <li><a href="index.html#tops">Tops &amp; Blusas</a></li>
+                <li><a href="index.html#pantalones">Pantalones &amp; Polleras</a></li>
+                <li><a href="pages/ofertas/ofertas.html">Ofertas</a></li>
+                <li><a href="pages/pages_footer/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+
+        <section class="hero">
+            <div class="hero__texto">
+                <p class="hero__eyebrow">Nueva colección en Alana</p>
+                <h1>Vestite con estilo, <span>a tu manera</span></h1>
+                <p class="hero__bajada">Ropa de mujer con envío rápido y precios accesibles.</p>
+                <a href="#productos-destacados" class="boton boton--primario">Ver productos</a>
+            </div>
+            <div class="hero__figura">
+    <img src="img/fondo.JPG" alt="Ropa de mujer Alana" class="hero__imagen">
+            </div>
+        </section>
+
+        <section class="franja-beneficios" aria-label="Beneficios de comprar en Alana">
+            <div class="beneficio"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><p>Envíos a todo el país</p></div>
+            <div class="beneficio"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i><p>Cambios</p></div>
+            <div class="beneficio"><i class="fa-solid fa-lock" aria-hidden="true"></i><p>Pago 100% seguro</p></div>
+            <div class="beneficio"><i class="fa-solid fa-tags" aria-hidden="true"></i><p>Ofertas </p></div>
+        </section>
+
+        <section class="categorias" aria-label="Categorías">
+    <div 
+
+            <a href="index.html#vestidos" class="tarjeta-categoria">
+                <img src="img/vestido.jpg" alt="Vestidos" class="tarjeta-categoria__img">
+                <h2>Vestidos</h2>
+            </a>
+        </div>
+        
+            <a href="index.html#tops" class="tarjeta-categoria">
+                <img src="img/blusa.jpg" alt="Tops y blusas" class="tarjeta-categoria__img">
+                <h2>Tops &amp; Blusas</h2>
+            </a>
+        </div>
+        
+            <a href="index.html#pantalones" class="tarjeta-categoria">
+                <img src="img/pantalon.jpg" alt="Pantalones y polleras" class="tarjeta-categoria__img">
+                <h2>Pantalones &amp; Polleras</h2>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section class="seccion-productos" id="productos-destacados" aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Productos destacados</h2>
+            <p class="seccion-productos__ayuda">Para salir sin preocupaciones</p>
+
+            <p id="mensaje-productos" class="mensaje-estado" role="status">Cargando productos...</p>
+
+            <div class="contenedor-productos" id="contenedor-productos">
+                <!-- Las tarjetas de producto se generan dinámicamente desde productos.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie" id="pie-pagina">
+        <div class="pie__columnas">
+            <div class="pie__columna">
+                <p class="logo logo--pie"><span aria-hidden="true"></span> Alana</p>
+                <p>Ropa de mujer con estilo.</p>
+            </div>
+            <div class="pie__columna">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="index.html#vestidos">Vestidos</a></li>
+                    <li><a href="index.html#tops">Tops &amp; Blusas</a></li>
+                    <li><a href="index.html#pantalones">Pantalones &amp; Polleras</a></li>
+                    <li><a href="pages/ofertas/ofertas.html">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h3>Mi cuenta</h3>
+                <ul>
+                    <li><a href="pages/registro_&_login/login.html">Ingresar</a></li>
+                    <li><a href="pages/registro_&_login/registro.html">Crear cuenta</a></li>
+                    <li><a href="pages/perfil_de_usuario/perfil.html">Mi perfil</a></li>
+                    <li><a href="pages/carrito/carrito.html">Mi carrito</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="pages/pages_footer/contacto.html">Contacto</a></li>
+                    <li><a href="pages/pages_footer/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie__redes" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+        </div>
+        <p class="pie__copy">&copy; 2026 Alana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script src="navbar.js" defer></script>
+    <script src="productos.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Alana</title>
+    <meta name="description" content="Escribinos tus consultas sobre pedidos, cambios o devoluciones en Alana.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../../estilos_navbar_&_footer.css">
+    <link rel="stylesheet" href="../../estilos_index.css">
+    <link rel="stylesheet" href="../paginas-internas.css">
+</head>
+<body>
+
+    <a href="#contenido-principal" class="salto-enlace">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+        <div class="cabecera__fila">
+            <a href="../../index.html" class="logo" aria-label="Alana, ir al inicio">
+               <img src="../../assets/logo-alana.svg" alt="Alana" class="logo__imagen">
+            </a>
+            <div class="cabecera__acciones" style="margin-left:auto;">
+                <a href="../carrito/carrito.html" class="accion accion--carrito">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span>Carrito</span>
+                    <span class="contador-carrito" id="contador-carrito" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="pagina-interna">
+        <h1>Contacto</h1>
+        <p style="color:var(--color-texto-suave); max-width:480px;">
+            ¿Tenés dudas sobre un pedido, un cambio o una devolución? Escribinos y te respondemos a la brevedad.
+        </p>
+
+        <form id="form-contacto" class="tarjeta-formulario" novalidate>
+            <div class="grupo-formulario">
+                <label for="contacto-nombre">Nombre</label>
+                <input type="text" id="contacto-nombre" name="nombre" required>
+                <span class="error-campo"></span>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="contacto-email">Correo electrónico</label>
+                <input type="email" id="contacto-email" name="email" required>
+                <span class="error-campo"></span>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="contacto-mensaje">Mensaje</label>
+                <textarea id="contacto-mensaje" name="mensaje" rows="5" required></textarea>
+                <span class="error-campo"></span>
+            </div>
+
+            <button type="submit" class="boton boton--primario boton--ancho">Enviar mensaje</button>
+            <p id="mensaje-envio-contacto" class="mensaje-formulario" role="status"></p>
+        </form>
+    </main>
+
+    <footer class="pie">
+        <p class="pie__copy">&copy; 2026 Alana. Todos los derechos reservados .</p>
+    </footer>
+
+    <script src="../../main.js" defer></script>
+    <script src="../../navbar.js" defer></script>
+    <script src="../../footer.js" defer></script>
+</body>
+</html>

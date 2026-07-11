@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar | Alana</title>
+    <meta name="description" content="Ingresá a tu cuenta de Alana.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../../estilos_navbar_&_footer.css">
+    <link rel="stylesheet" href="../../estilos_index.css">
+    <link rel="stylesheet" href="../paginas-internas.css">
+</head>
+<body>
+
+    <a href="#contenido-principal" class="salto-enlace">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+        <div class="cabecera__fila">
+            <a href="../../index.html" class="logo" aria-label="Alana, ir al inicio">
+               <img src="../../assets/logo-alana.svg" alt="Alana" class="logo__imagen">
+            </a>
+            <div class="cabecera__acciones" style="margin-left:auto;">
+                <a href="../carrito/carrito.html" class="accion accion--carrito">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span>Carrito</span>
+                    <span class="contador-carrito" id="contador-carrito" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="pagina-interna">
+        <h1>Ingresar</h1>
+
+        <form id="form-login" class="tarjeta-formulario" novalidate>
+            <div class="grupo-formulario">
+                <label for="login-email">Correo electrónico</label>
+                <input type="email" id="login-email" name="email" required>
+                <span class="error-campo"></span>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" name="password" required minlength="6">
+                <span class="error-campo"></span>
+            </div>
+
+            <button type="submit" class="boton boton--primario boton--ancho">Ingresar</button>
+            <p id="mensaje-login" class="mensaje-formulario" role="status"></p>
+        </form>
+
+        <p style="margin-top:16px; font-size:0.9rem;">
+            ¿No tenés cuenta? <a href="registro.html" style="color:var(--color-primario-oscuro); font-weight:600;">Creá una acá</a>
+        </p>
+    </main>
+
+    <footer class="pie">
+        <p class="pie__copy">&copy; 2026 Alana. Todos los derechos reservados .</p>
+    </footer>
+
+    <script src="../../main.js" defer></script>
+    <script src="../../navbar.js" defer></script>
+    <script>
+        // Demo simple: que valida el formulario con la función genérica de main.js.
+        // No hay backend real — es solo para mostrar la validación con DOM.
+        document.getElementById("form-login").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const mensaje = document.getElementById("mensaje-login");
+            if (validarFormulario(this)) {
+                mensaje.textContent = "¡Bienvenido/a de nuevo! (demo, sin backend real)";
+                mensaje.className = "mensaje-formulario mensaje-formulario--exito";
+            } else {
+                mensaje.textContent = "Revisá los campos marcados en rojo.";
+                mensaje.className = "mensaje-formulario mensaje-formulario--error";
+            }
+        });
+    </script>
+</body>
+</html>

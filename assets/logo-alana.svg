@@ -1,0 +1,29 @@
+<svg viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alana">
+  <!-- Ícono: silueta minimalista de un vestido -->
+  <g>
+    <circle cx="47" cy="30" r="9" fill="#8C3B3B"/>
+    <path d="M38,38
+             C33,40 30,44 29,50
+             L14,112
+             C13,117 16,120 21,120
+             L73,120
+             C78,120 81,117 80,112
+             L65,50
+             C64,44 61,40 56,38
+             C51,42 43,42 38,38
+             Z"
+          fill="#8C3B3B"/>
+    <path d="M31,72 C40,76 54,76 63,72" stroke="#C98A5A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="105" y="82"
+        font-family="'Playfair Display', Georgia, serif"
+        font-style="italic"
+        font-weight="600"
+        font-size="58"
+        fill="#2B2320">alana</text>
+
+  <!-- Línea decorativa bajo el nombre -->
+  <path d="M107,96 C160,108 300,108 360,96" stroke="#C98A5A" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

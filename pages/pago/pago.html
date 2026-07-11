@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar mi pedido | Alana</title>
+    <meta name="description" content="Confirmá tu compra en Alana.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../../estilos_navbar_&_footer.css">
+    <link rel="stylesheet" href="../../estilos_index.css">
+    <link rel="stylesheet" href="../paginas-internas.css">
+</head>
+<body>
+
+    <a href="#contenido-principal" class="salto-enlace">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+        <div class="cabecera__fila">
+            <a href="../../index.html" class="logo" aria-label="Alana, ir al inicio">
+               <img src="../../assets/logo-alana.svg" alt="Alana" class="logo__imagen">
+            </a>
+            <div class="cabecera__acciones" style="margin-left:auto;">
+                <a href="../carrito/carrito.html" class="accion accion--carrito">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span>Carrito</span>
+                    <span class="contador-carrito" id="contador-carrito" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="pagina-interna">
+        <h1>Confirmar compra</h1>
+
+        <section aria-labelledby="titulo-resumen" style="margin-bottom:30px;">
+            <h2 id="titulo-resumen" style="font-size:1.1rem; margin-bottom:12px;">Resumen del pedido</h2>
+            <div id="resumen-pago"><!-- Se completa desde main.js --></div>
+            <p class="pago-total">Total: $<span id="pago-total">0.00</span></p>
+        </section>
+
+        <section aria-labelledby="titulo-datos-pago">
+            <h2 id="titulo-datos-pago" class="visualmente-oculto">Datos de pago</h2>
+            <form id="form-pago" class="tarjeta-formulario" novalidate>
+                <p style="color:var(--color-texto-suave); font-size:0.85rem; margin-top:0;">
+                    simulación de pago para el proyecto 
+                </p>
+
+                <div class="grupo-formulario">
+                    <label for="pago-nombre">Nombre en la tarjeta</label>
+                    <input type="text" id="pago-nombre" name="nombre" required>
+                    <span class="error-campo"></span>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="pago-numero">Número de tarjeta</label>
+                    <input type="text" id="pago-numero" name="numero" inputmode="numeric" placeholder="0000 0000 0000 0000" required>
+                    <span class="error-campo"></span>
+                </div>
+
+                <div style="display:flex; gap:14px;">
+                    <div class="grupo-formulario" style="flex:1;">
+                        <label for="pago-vencimiento">Vencimiento</label>
+                        <input type="text" id="pago-vencimiento" name="vencimiento" placeholder="MM/AA" required>
+                        <span class="error-campo"></span>
+                    </div>
+                    <div class="grupo-formulario" style="flex:1;">
+                        <label for="pago-cvv">CVV</label>
+                        <input type="text" id="pago-cvv" name="cvv" inputmode="numeric" required>
+                        <span class="error-campo"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="boton boton--primario boton--ancho">Confirmar compra</button>
+            </form>
+
+            <div id="pago-confirmacion">
+                <p><strong>¡Compra confirmada!</strong> Gracias por comprar en Alana.</p>
+                <a href="../../index.html" class="boton boton--secundario">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="pie__copy">&copy; 2026 Alana. Todos los derechos reservados .</p>
+    </footer>
+
+    <script src="../../main.js" defer></script>
+    <script src="../../navbar.js" defer></script>
+</body>
+</html>

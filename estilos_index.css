@@ -1,0 +1,231 @@
+
+
+.hero {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 60px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.hero__texto { max-width: 520px; }
+.hero__eyebrow {
+    color: var(--color-primario-oscuro);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin: 0 0 10px;
+}
+.hero h1 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+.hero h1 span { color: var(--color-primario-oscuro); }
+.hero__bajada {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    margin-bottom: 26px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: var(--radio-chico);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.boton--primario {
+    background: var(--color-primario);
+    color: #FFF8F2;
+}
+.boton--primario:hover {
+    background: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+}
+
+.hero__figura {
+    display: flex;
+    gap: 10px;
+    font-size: 5rem;
+    flex-shrink: 0;
+}
+.hero__emoji { transform: rotate(-8deg); }
+.hero__emoji--2 { transform: translateY(20px) rotate(6deg); }
+.hero__emoji--3 { transform: rotate(-4deg); }
+
+/* ==========================================================================
+   FRANJA DE BENEFICIOS
+   ========================================================================== */
+.franja-beneficios {
+    background: var(--color-superficie);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 22px 20px;
+}
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-texto-suave);
+}
+.beneficio i { color: var(--color-primario-oscuro); font-size: 1.1rem; }
+.beneficio p { margin: 0; }
+
+/* 
+CATEGORÍAS
+ */
+.categorias {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.tarjeta-categoria {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.tarjeta-categoria:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+.tarjeta-categoria__img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: var(--color-fondo);
+    border-radius: var(--radio-chico);
+    margin: 0 auto 12px;
+}
+.tarjeta-categoria h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* 
+ PRODUCTOS
+ */
+.seccion-productos {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+.seccion-productos h2 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+.seccion-productos__ayuda {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    max-width: 620px;
+    margin-bottom: 28px;
+}
+.mensaje-estado {
+    color: var(--color-texto-suave);
+    font-style: italic;
+}
+.mensaje-estado:empty { display: none; }
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+/* Tarjeta de producto: elemento firma con la etiqueta de precio tipo "cinta" */
+.tarjeta-producto {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+}
+.tarjeta-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+.tarjeta-producto__imagen-wrap {
+    background: #FBF7EC;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+.tarjeta-producto__imagen-wrap img {
+    max-height: 100%;
+    object-fit: contain;
+}
+.tarjeta-producto__cuerpo {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+.tarjeta-producto__titulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6em;
+}
+.tarjeta-producto__precio {
+    font-family: var(--fuente-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #FFF8F2;
+    align-self: flex-start;
+    background: var(--color-primario);
+    padding: 2px 12px 2px 10px;
+    clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+}
+.tarjeta-producto__boton {
+    margin-top: auto;
+    background: var(--color-texto);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--radio-chico);
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.tarjeta-producto__boton:hover { background: var(--color-primario-oscuro); color: #FFF8F2; }
+.tarjeta-producto__boton.agregado { background: var(--color-exito); color: white; }
+
+/*RESPONSIVO */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; padding-top: 40px; }
+    .hero__texto { max-width: 100%; }
+    .hero__figura { font-size: 3.5rem; }
+    .categorias { grid-template-columns: 1fr; }
+}
